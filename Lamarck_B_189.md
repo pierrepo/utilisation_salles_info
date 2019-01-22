@@ -2,7 +2,7 @@
 
 ## Accès
 
-La salle Lamarck B 189 est située au premier étage du bâtiment Lamarck B.
+La salle Lamarck B 189 est située au premier étage du [bâtiment Lamarck B](https://campus.univ-paris-diderot.fr/file/7492/download?token=Og2VmjpP).
 
 La clé qui ouvre cette salle se trouve dans un boîte à clés blanche située un étage au dessus (au 2e). Le code d'accès pour cette boite à clés vous sera communiqué.
 
