@@ -25,11 +25,23 @@ Le schéma de l'architecture est présenté dans la Figure @fig:architecture_sdv
 
 L'authentification sous Ubuntu se fait via un serveur centralisé NIS (*Yellow pages*) avec le montage des répertoires des utilisateurs en NFS. Autrement dit, n'importe quel utilisateur peut s'authentifier et retrouver ses fichiers sur n'importe quelle machine d'enseignement (que ce soit dans la même salle ou dans une autre salle).
 
-Le répertoire `/home` (contenant les données utilisateur) est situé sur le serveur est sauvegardé tous les jours. Ce répertoire étant exporté par NFS sur les clients des salles informatiques, il est essentiel de ne pas demander aux étudiants de copier un gros fichier (> 1Go) dans leur répertoire utilisateur en même temps. Si vous avez besoin d'utiliser de tels fichiers, il existe un répertoire `/scratch` en 777 qui est local à chaque machine. Ainsi une machine cliente, ne voit que son `/scratch` local. Si vous souhaitez copier un/des fichier(s) à l'avance sur chaque machine cliente de la 189, nous pouvons le faire pour vous ; dans ce cas, merci de nous en faire la demande 3 jours avant votre intervention. Enfin, ce répertoire `/scratch` n'est pas sauvegardé. 
+Le répertoire `/home/sdv` (contenant les données utilisateur) est situé sur le serveur, il est sauvegardé tous les jours. Ce répertoire étant exporté par NFS sur les clients des salles informatiques, il est essentiel de ne pas demander aux étudiants de copier un gros fichier (> 1Go) dans leur répertoire utilisateur en même temps. Si vous avez besoin d'utiliser de tels fichiers, il existe un répertoire `/scratch` en 777 qui est local à chaque machine. Ainsi une machine cliente, ne voit que son `/scratch` local. Si vous souhaitez copier un/des fichier(s) à l'avance sur chaque machine cliente de la 189, nous pouvons le faire pour vous ; dans ce cas, merci de nous en faire la demande 3 jours avant votre intervention. Enfin, ce répertoire `/scratch` n'est pas sauvegardé. 
 
 Le mot de passe par défaut communiqué le premier jour doit impérativement être changé avec la commande `yppasswd` tapée dans un terminal. Après ce changement, il est vivement conseillé de se déconnecter et se reconnecter à la session Linux.
 
 À l'issue de la formation, l'ensemble des comptes, ainsi que les données associées, seront détruits sans préavis.
+
+
+## Répertoires utilisateurs pour le DU Bii
+
+Les répertoires utilisateurs pour DU seront :
+
+- pour les enseignants : `/home/sdv/dubii/XXXX` (groupe `xxxx`)
+- pour les stagiaires : `/home/sdv/dubii/YYYY` (groupe `yyyy`)
+
+Chaque répertoire n'est visible que par son propriétaire.
+
+Nous avons également un répertoire `/home/sdv/dubii/ZZZZ` permettant de créer des espaces pour partager ces fichiers. Tout fichier crée dans ce répertoire ne sera visible que par les membres du groupe `zzzzz`. [TODO: ajouter les détails une fois que tous ces reps seront créés]
 
 
 ## Environnements logiciels
@@ -53,6 +65,10 @@ Des logiciels de bioinformatique sont disponibles dans `/opt/sdv/` et directemen
 - IGV 2.4.16 (à lancer avec la commande `/opt/sdv/bin/igv`)
 - Cytoscape 3.6.1 (à lancer avec la commande `/opt/sdv/bin/cytoscape`)
 
+
+## SSH
+
+Le logiciel SSH est présent sur toutes les machines clientes. Il est possible de sortir en SSH vers n'importe quelle machine extérieur au vlan des salles informatiques. Il est par contre impossible de se connecter de l'extérieur directement sur les clients des salles informatiques par SSH. Toutefois, nous avons mis en place une passerelle, accessible de l'extérieur, permettant de se connecter sur un client pour tester à l'avance un TP, ou pour installer un environnement conda (cf. rubrique suivante). Si vous souhaitez utiliser cette passerelle, merci de nous contacter au moins 3 jours avant votre intervention.
 
 ## Conda
 
