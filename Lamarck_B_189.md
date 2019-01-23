@@ -19,9 +19,15 @@ La salle 189 est équipée de 20 postes informatiques, d'un vidéo-projecteur et
 
 Les postes informatiques sont équipés des systèmes d'exploitation Ubuntu 18.04 et Windows 7.
 
+Le schéma de l'architecture est présenté dans la Figure @fig:architecture_sdv.
+
+![Schéma de l'architecture informatique dans les salles de l'UFR SDV de Paris Diderot](architecture_sdv.png){ #fig:architecture_sdv }
+
 L'authentification sous Ubuntu se fait via un serveur centralisé NIS (*Yellow pages*) avec le montage des répertoires des utilisateurs en NFS. Autrement dit, n'importe quel utilisateur peut s'authentifier et retrouver ses fichiers sur n'importe quelle machine d'enseignement (que ce soit dans la même salle ou dans une autre salle).
 
-Le mot de passe par défaut communiqué le premier jour doit impérativement être changé avec la commande `yppasswd` tapée dans un terminal.
+Le répertoire `/home` (contenant les données utilisateur) est situé sur le serveur est sauvegardé tous les jours. Ce répertoire étant exporté par NFS sur les clients des salles informatiques, il est essentiel de ne pas demander aux étudiants de copier un gros fichier (> 1Go) dans leur répertoire utilisateur en même temps. Si vous avez besoin d'utiliser de tels fichiers, il existe un répertoire `/scratch` en 777 qui est local à chaque machine. Ainsi une machine cliente, ne voit que son `/scratch` local. Si vous souhaitez copier un/des fichier(s) à l'avance sur chaque machine cliente de la 189, nous pouvons le faire pour vous ; dans ce cas, merci de nous en faire la demande 3 jours avant votre intervention. Enfin, ce répertoire `/scratch` n'est pas sauvegardé. 
+
+Le mot de passe par défaut communiqué le premier jour doit impérativement être changé avec la commande `yppasswd` tapée dans un terminal. Après ce changement, il est vivement conseillé de se déconnecter et se reconnecter à la session Linux.
 
 À l'issue de la formation, l'ensemble des comptes, ainsi que les données associées, seront détruits sans préavis.
 
