@@ -25,7 +25,7 @@ figure ci-dessous :
 
 ![Schéma de l'architecture informatique dans les salles de l'UFR SDV de Paris Diderot](architecture_sdv.png)
 
-L'authentification sous Ubuntu se fait via un serveur centralisé NIS (*Yellow pages*) avec le montage des répertoires des utilisateurs en NFS. Autrement dit, n'importe quel utilisateur peut s'authentifier et retrouver ses fichiers sur n'importe quelle machine d'enseignement (que ce soit dans la même salle ou dans une autre salle).
+L'authentification sous Ubuntu se fait via un serveur centralisé NIS (*Yellow pages*) avec le montage des répertoires des utilisateurs en NFS. Autrement dit, n'importe quel utilisateur peut s'authentifier et retrouver ses fichiers sur n'importe quelle machine d'enseignement (que ce soit dans la même salle ou dans une autre salle). Toutefois, il est important qu'un même utilisateur ne se connecte pas sur deux ordinateurs en même temps, cela pouvant mener à des conflits de session. Il est donc conseillé d'encourager les stagiaires à se déconnecter proprement de leur session à chaque fin de cours.
 
 Le répertoire `/home/sdv` (contenant les données utilisateur) est situé sur le serveur, il est sauvegardé tous les jours. Ce répertoire étant exporté par NFS sur les clients des salles informatiques, il est essentiel de ne pas demander aux étudiants de copier un gros fichier (> 1Go) dans leur répertoire utilisateur en même temps.
 
