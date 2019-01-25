@@ -36,12 +36,14 @@ Le mot de passe par défaut communiqué le premier jour doit impérativement êt
 
 Les répertoires utilisateurs pour DU seront :
 
-- pour les enseignants : `/home/sdv/dubii/XXXX` (groupe `xxxx`)
-- pour les stagiaires : `/home/sdv/dubii/YYYY` (groupe `yyyy`)
+- pour les enseignants **non P7** : `/home/sdv/dubii-ens` (groupe `dubii-ens`)
+- pour les stagiaires : `/home/sdv/dubii-etu` (groupe `dubii-etu`)
+(pour les enseignants **P7**, le répertoire `/home/sdv/enseignant` ne change pas)
 
 Chaque répertoire n'est visible que par son propriétaire.
 
-Nous avons également un répertoire `/home/sdv/dubii/ZZZZ` permettant de créer des espaces pour partager ces fichiers. Tout fichier crée dans ce répertoire ne sera visible que par les membres du groupe `zzzzz`. [TODO: ajouter les détails une fois que tous ces reps seront créés]
+Nous avons également un répertoire `/home/sdv/dubii` permettant de créer des espaces pour partager ces fichiers. Nous avons créé pour cela un groupe `dubii` : tout membre des groupes `dubii-ens`, `dubii-etu`, ainsi que les intervenants P7, ont été ajoutés à ce groupe `dubii`. Tout fichier créé dans ce répertoire ne sera visible que par les membres du groupe `dubii`.
+Attention, pour rappel, ce répertoire partagé `/home/sdv/dubii` est exporté en NFS vers les clients. Ainsi, évitez de demander aux stagiaires de copier tous en même temps un gros fichier de ce répertoire vers leur répertoire home. L'idée du répertoire partagé étant d'éviter la duplication, vous ne devriez pas en avoir besoin ;-) !
 
 
 ## Environnements logiciels
