@@ -41,7 +41,7 @@ Le mot de passe par défaut communiqué le premier jour doit impérativement êt
 Les répertoires utilisateurs pour le DU seront :
 - pour les enseignants **non P7** : `/home/sdv/dubii-ens/<nom-login>` (groupe `dubii-ens`)
 - pour les stagiaires : `/home/sdv/dubii-etus/<nom-login>` (groupe `dubii-etu`)
-(pour les enseignants **P7**, le répertoire `/home/sdv/enseignants/<nom-login>` ne change pas)
+- pour les enseignants **P7**, leur répertoire `/home/sdv/enseignants/<nom-login>` ne change pas
 
 Chaque répertoire n'est visible que par son propriétaire.
 
